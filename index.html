@@ -17,6 +17,22 @@
 <meta name="twitter:title" content="SendToAI — Bundle Your Entire Codebase for AI">
 <meta name="twitter:description" content="Bundle errors + connected code into one paste-ready block for any AI — then apply the reply back to your files. No API key.">
 <meta name="twitter:image" content="https://sendtoai.dev/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SendToAI",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux (VS Code)",
+  "description": "VS Code extension that bundles your errors and project files into one paste-ready block for Claude, ChatGPT, or any AI — then applies the AI's reply back to your files. No API key.",
+  "url": "https://sendtoai.dev/",
+  "installUrl": "https://marketplace.visualstudio.com/items?itemName=OxainZ.sendtoai",
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro (lifetime)", "price": "9", "priceCurrency": "USD" }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -185,9 +201,9 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
 
 <section class="hero">
   <div class="hero-glow"></div>
-  <div class="badge"><span class="badge-dot"></span>Free VS Code Extension · v3.3.0</div>
+  <div class="badge"><span class="badge-dot"></span>Free VS Code Extension · No API key needed</div>
   <h1>Give your AI <span class="accent">your entire</span><br><span class="dim">codebase. Not 20 files.</span></h1>
-  <p class="hero-sub">Bundle 100+ project files into one paste-ready block for Claude, ChatGPT, or any AI assistant. One shortcut. Full context. Instantly.</p>
+  <p class="hero-sub">Bundle your errors and 100+ project files into one paste-ready block for Claude, ChatGPT, or any AI — then paste the reply back and apply the edits to your files. Full round trip, inside your editor.</p>
   <div class="hero-actions">
     <a class="btn-primary" href="https://marketplace.visualstudio.com/items?itemName=OxainZ.sendtoai" target="_blank" rel="noopener">⚡ Install Free on VS Code</a>
     <a class="btn-secondary" href="#pricing">View Pro →</a>
@@ -195,11 +211,11 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
   <div class="hero-stats">
     <div class="stat"><div class="stat-val">100+</div><div class="stat-lbl">files in one paste</div></div>
     <div class="stat-div"></div>
-    <div class="stat"><div class="stat-val">3</div><div class="stat-lbl">output formats</div></div>
+    <div class="stat"><div class="stat-val">4</div><div class="stat-lbl">output formats</div></div>
     <div class="stat-div"></div>
     <div class="stat"><div class="stat-val">0</div><div class="stat-lbl">data sent to us</div></div>
     <div class="stat-div"></div>
-    <div class="stat"><div class="stat-val">$0.04</div><div class="stat-lbl">avg cost per bundle</div></div>
+    <div class="stat"><div class="stat-val">$0</div><div class="stat-lbl">monthly — Pro is $9 once</div></div>
   </div>
   <div class="demo-wrap">
     <div class="demo-bar">
@@ -252,13 +268,13 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
         <div class="how-num">02</div><div class="how-icon">⚡</div>
         <div class="how-title">Hit the shortcut</div>
         <p class="how-desc">Press the keyboard shortcut to bundle. Select exactly which files to include with the visual file picker, choose your format, and add a prompt template.</p>
-        <span class="how-kbd">Ctrl+Shift+A</span>
-        <span class="how-kbd" style="margin-left:6px">⌘+Shift+A</span>
+        <span class="how-kbd">Ctrl+Alt+A</span>
+        <span class="how-kbd" style="margin-left:6px">⌘+Alt+A</span>
       </div>
       <div class="how-card">
         <div class="how-num">03</div><div class="how-icon">🤖</div>
-        <div class="how-title">Paste into any AI</div>
-        <p class="how-desc">Your entire project is on the clipboard. Paste into Claude, ChatGPT, or any AI chat. The AI gets full context — every file, every relationship, instantly.</p>
+        <div class="how-title">Paste — then apply the reply</div>
+        <p class="how-desc">Your entire project is on the clipboard. Paste into Claude, ChatGPT, or any AI chat — then copy the reply and hit <strong>Apply AI Reply</strong> to write the edits back to your files. Reviewable, undoable with Ctrl+Z.</p>
       </div>
     </div>
   </div>
@@ -269,6 +285,21 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
     <div class="section-tag">// features</div>
     <h2 class="section-title">Everything you need<br>to give AI full context.</h2>
     <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-emoji">🐛</div>
+        <div class="feat-title">Bundle Errors</div>
+        <p class="feat-desc">One click bundles every file VS Code is flagging plus the exact error messages, with a ready-to-paste "please fix these" prompt. Web bundlers can't see your Problems panel — this can.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-emoji">📥</div>
+        <div class="feat-title">Apply AI Reply</div>
+        <p class="feat-desc">Copy the AI's answer, run one command, and pick which edits to write back to your files. Reviewable in git diff, undoable with a single Ctrl+Z. No more hand-copying snippets.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-emoji">🧠</div>
+        <div class="feat-title">Smart Trim <span class="feat-pro">PRO</span></div>
+        <p class="feat-desc">When a bundle must shrink to fit, files are ranked by relevance to your prompt — and files they import survive the cut with them. Connected context, not orphaned snippets.</p>
+      </div>
       <div class="feat-card">
         <div class="feat-emoji">🗂️</div>
         <div class="feat-title">Visual File Picker</div>
@@ -296,8 +327,8 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </div>
       <div class="feat-card">
         <div class="feat-emoji">🏷️</div>
-        <div class="feat-title">3 Output Formats</div>
-        <p class="feat-desc">Standard plain text, Claude XML (optimized structured tags), or Compact (strips comments to save ~20% tokens). Pick what works for your AI.</p>
+        <div class="feat-title">4 Output Formats</div>
+        <p class="feat-desc">Standard plain text, Claude XML (structured tags), Compact (strips comments, ~20% fewer tokens), or Minimal (max token savings). Pick what works for your AI.</p>
       </div>
       <div class="feat-card">
         <div class="feat-emoji">📝</div>
@@ -331,7 +362,8 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li><span class="chk">✓</span> Up to 50 files per bundle</li>
-          <li><span class="chk">✓</span> All 3 output formats</li>
+          <li><span class="chk">✓</span> Bundle Errors + Apply AI Reply</li>
+          <li><span class="chk">✓</span> All 4 output formats</li>
           <li><span class="chk">✓</span> Open Tabs mode</li>
           <li><span class="chk">✓</span> Project Notes</li>
           <li><span class="chk">✓</span> Token + cost estimator</li>
@@ -369,7 +401,9 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </thead>
       <tbody>
         <tr><td class="feature-name">Files per bundle</td><td>Up to 50</td><td class="col-pro">Unlimited</td></tr>
-        <tr><td class="feature-name">Output formats (Standard, XML, Compact)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+        <tr><td class="feature-name">Bundle Errors (from the Problems panel)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+        <tr><td class="feature-name">Apply AI Reply (write edits back, undoable)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+        <tr><td class="feature-name">Output formats (Standard, XML, Compact, Minimal)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Open Tabs mode</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Visual file picker</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Token + cost estimator</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
@@ -377,8 +411,8 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
         <tr><td class="feature-name">Project notes / context memory</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Named presets</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Git diff mode</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
-        <tr><td class="feature-name">Fit to AI Window</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
-        <tr><td class="feature-name">Use on multiple machines</td><td>1</td><td class="col-pro">3</td></tr>
+        <tr><td class="feature-name">Fit to AI Window (smart relevance trim)</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
+        <tr><td class="feature-name">Pro license machines</td><td><span class="cross">—</span></td><td class="col-pro">3</td></tr>
         <tr><td class="feature-name">Price</td><td>Free</td><td class="col-pro">$9 one-time</td></tr>
       </tbody>
     </table>
