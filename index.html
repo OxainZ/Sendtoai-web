@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SendToAI — Bundle Your Entire Codebase for AI</title>
-<meta name="description" content="Bundle your entire project into one smart text block and paste into Claude, ChatGPT, or any AI. Bypasses the 20-file limit. Free VS Code extension.">
+<title>Paste Your Entire Codebase into ChatGPT or Claude — SendToAI</title>
+<meta name="description" content="Free VS Code extension that bundles your whole project — or just the files with errors — into one paste-ready block for ChatGPT, Claude, Gemini or any AI, then applies the AI's reply back to your files. No API key, no upload.">
 <link rel="canonical" href="https://sendtoai.dev/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SendToAI — Bundle Your Entire Codebase for AI">
+<meta property="og:title" content="Paste Your Entire Codebase into ChatGPT or Claude — SendToAI">
 <meta property="og:description" content="Stop pasting files one by one. Bundle 100+ files into one paste-ready block for any AI assistant.">
 <meta property="og:url" content="https://sendtoai.dev">
 <meta property="og:image" content="https://sendtoai.dev/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SendToAI — Bundle Your Entire Codebase for AI">
+<meta name="twitter:title" content="Paste Your Entire Codebase into ChatGPT or Claude — SendToAI">
 <meta name="twitter:description" content="Bundle errors + connected code into one paste-ready block for any AI — then apply the reply back to your files. No API key.">
 <meta name="twitter:image" content="https://sendtoai.dev/og-image.png">
 <script type="application/ld+json">
@@ -30,6 +30,64 @@
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Pro (lifetime)", "price": "9", "priceCurrency": "USD" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I give ChatGPT or Claude my entire codebase?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Install SendToAI in VS Code, open your project, and press Ctrl+Alt+B (Cmd+Alt+B on Mac). It scans your file tree, skips node_modules, lock files, binaries and anything in .gitignore, and copies everything else to your clipboard as one structured text block — a file tree plus every file's contents, clearly labelled. Paste that single block into the ChatGPT or Claude chat box and the AI can see your whole project at once." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this get around ChatGPT's file upload limit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT's upload limit (about 20 files per message) applies to file attachments. SendToAI sidesteps it by turning your project into one pasted text block instead — pasted text has no file count at all. The real constraint becomes the model's context window, which SendToAI shows you before you paste: color-coded bars for ChatGPT Free, ChatGPT Plus, Claude, and Gemini tell you whether your bundle fits." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many files can I bundle? What are the limits?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The free tier bundles up to 50 files per bundle; Pro ($9 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SendToAI send my code anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Never. All file reading and bundling happens entirely on your local machine. The only network request the extension ever makes is to validate your Pro license key with Lemon Squeezy — and that's just a UUID, not your code. Your source code is only sent to wherever you paste it (i.e. Claude, ChatGPT, etc.), and that's entirely in your control." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get my Pro license key after purchase?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lemon Squeezy delivers your license key immediately by email upon payment. You'll also find it on your order page. Once you have it, open VS Code, open the Command Palette (Ctrl+Shift+P), and run \"SendToAI: Enter License Key\". Paste in the key and you're activated." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Pro on multiple computers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — each Pro license allows activation on up to 3 machines. If you need more, contact us and we can accommodate team setups." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the refund policy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "14-day full refund, no questions asked. If you're not happy for any reason within 14 days of purchase, email support@sendtoai.dev and we'll refund you immediately." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a subscription?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. SendToAI Pro is a one-time payment of $9. You get a lifetime license with no recurring charges, and all future Pro features are included." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is \"Fit to AI Window\"?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A Pro feature that automatically sizes your bundle to fit a specific AI's context window. Pick \"ChatGPT Plus 32K\" and SendToAI automatically drops the largest files until the total fits — so you never crash your AI with an oversized paste again." }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI tools does it work with?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Any AI that accepts text input. It's been tested and optimized for Claude (with a dedicated XML format), ChatGPT, Gemini, Grok, GitHub Copilot Chat, and any other AI assistant or API that accepts text context." }
+    }
   ]
 }
 </script>
@@ -424,6 +482,18 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
     <div class="section-tag">// faq</div>
     <h2 class="section-title">Common questions.</h2>
     <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I give ChatGPT or Claude my entire codebase?<span class="faq-arrow">↓</span></button>
+        <div class="faq-a">Install SendToAI in VS Code, open your project, and press Ctrl+Alt+B (⌘+Alt+B on Mac). It scans your file tree, skips node_modules, lock files, binaries and anything in .gitignore, and copies everything else to your clipboard as one structured text block — a file tree plus every file's contents, clearly labelled. Paste that single block into the ChatGPT or Claude chat box and the AI can see your whole project at once.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How does this get around ChatGPT's file upload limit?<span class="faq-arrow">↓</span></button>
+        <div class="faq-a">ChatGPT's upload limit (about 20 files per message) applies to file <em>attachments</em>. SendToAI sidesteps it by turning your project into one pasted text block instead — pasted text has no file count at all. The real constraint becomes the model's context window, which SendToAI shows you before you paste: color-coded bars for ChatGPT Free, ChatGPT Plus, Claude, and Gemini tell you whether your bundle fits.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How many files can I bundle? What are the limits?<span class="faq-arrow">↓</span></button>
+        <div class="faq-a">The free tier bundles up to 50 files per bundle; Pro ($9 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window.</div>
+      </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Does SendToAI send my code anywhere?<span class="faq-arrow">↓</span></button>
         <div class="faq-a">Never. All file reading and bundling happens entirely on your local machine. The only network request the extension ever makes is to validate your Pro license key with Lemon Squeezy — and that's just a UUID, not your code. Your source code is only sent to wherever you paste it (i.e. Claude, ChatGPT, etc.), and that's entirely in your control.</div>
