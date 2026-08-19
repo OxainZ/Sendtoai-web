@@ -81,7 +81,7 @@
     {
       "@type": "Question",
       "name": "What is \"Fit to AI Window\"?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A Pro feature that automatically sizes your bundle to fit a specific AI's context window. Pick \"ChatGPT Plus 32K\" and SendToAI automatically drops the largest files until the total fits — so you never crash your AI with an oversized paste again." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A Pro feature that automatically sizes your bundle to fit a specific AI's context window. Pick \"ChatGPT Plus 32K\" and SendToAI keeps the files most relevant to what you are working on — ranked by your prompt plus the import graph, so the dependencies of those files come along too — and drops the least relevant until it fits. Dumb bundlers cut the biggest files; this one cuts the least useful." }
     },
     {
       "@type": "Question",
@@ -376,7 +376,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       <div class="feat-card">
         <div class="feat-emoji">🎯</div>
         <div class="feat-title">Fit to AI Window <span class="feat-pro">PRO</span></div>
-        <p class="feat-desc">Select a target AI (ChatGPT Free 8K, ChatGPT Plus 32K, Claude 200K, Gemini 1M) and SendToAI auto-drops the largest files until your bundle fits perfectly. Never crash your AI with an oversized paste again.</p>
+        <p class="feat-desc">Select a target AI (ChatGPT Free 8K, ChatGPT Plus 32K, Claude 200K, Gemini 1M) and SendToAI keeps what actually matters for your task — ranking every file by your prompt and following the import graph so its dependencies survive the cut too. Dumb bundlers drop the biggest files; this drops the least relevant. Never crash your AI with an oversized paste again.</p>
       </div>
       <div class="feat-card">
         <div class="feat-emoji">📊</div>
@@ -516,7 +516,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What is "Fit to AI Window"?<span class="faq-arrow">↓</span></button>
-        <div class="faq-a">A Pro feature that automatically sizes your bundle to fit a specific AI's context window. Pick "ChatGPT Plus 32K" and SendToAI automatically drops the largest files until the total fits — so you never crash your AI with an oversized paste again.</div>
+        <div class="faq-a">A Pro feature that automatically sizes your bundle to fit a specific AI's context window. Pick "ChatGPT Plus 32K" and SendToAI keeps the files most relevant to what you're working on — ranked by your prompt plus the import graph, so the dependencies of those files come along too — and drops the least relevant until it fits. Dumb bundlers cut the biggest files; this one cuts the least useful.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What AI tools does it work with?<span class="faq-arrow">↓</span></button>
