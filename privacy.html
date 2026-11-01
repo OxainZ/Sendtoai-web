@@ -69,7 +69,7 @@
   <p>If you purchase SendToAI Pro, the extension will make HTTPS requests to the Lemon Squeezy License API to activate and periodically validate your license key. These requests include:</p>
   <ul>
     <li>Your license key (a UUID string)</li>
-    <li>A hashed machine identifier (VS Code's <code>env.machineId</code> — this is a non-reversible hash, not your real machine name or any personal identifier)</li>
+    <li>An activation name made of your computer's hostname and a random identifier generated once per install, so you can recognise each machine when managing activations. No hardware identifiers, no account data.</li>
   </ul>
   <p>These requests go directly to Lemon Squeezy's servers. We do not operate a separate validation server and do not log these requests ourselves.</p>
 
