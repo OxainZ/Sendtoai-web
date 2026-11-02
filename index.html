@@ -29,7 +29,8 @@
   "installUrl": "https://marketplace.visualstudio.com/items?itemName=OxainZ.sendtoai",
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Pro (lifetime)", "price": "9.99", "priceCurrency": "USD" }
+    { "@type": "Offer", "name": "Pro (lifetime)", "price": "14.99", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Team (5 developers)", "price": "39.00", "priceCurrency": "USD" }
   ]
 }
 </script>
@@ -51,7 +52,7 @@
     {
       "@type": "Question",
       "name": "How many files can I bundle? What are the limits?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The free tier bundles the 50 most relevant files for your prompt; Pro ($9.99 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K to 1M window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window." }
+      "acceptedAnswer": { "@type": "Answer", "text": "The free tier bundles the 50 most relevant files for your prompt; Pro ($14.99 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K to 1M window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window." }
     },
     {
       "@type": "Question",
@@ -66,7 +67,7 @@
     {
       "@type": "Question",
       "name": "Can I use Pro on multiple computers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes — each Pro license allows activation on up to 5 machines. If you need more, contact us and we can accommodate team setups." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — each Pro license allows activation on up to 5 machines. Teams: the Team pack ($39 one-time) is one key with 25 activations for up to 5 developers. Need more seats? Email support@sendtoai.dev." }
     },
     {
       "@type": "Question",
@@ -76,7 +77,7 @@
     {
       "@type": "Question",
       "name": "Is this a subscription?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. SendToAI Pro is a one-time payment of $9.99 (plus VAT where applicable). You get a lifetime license with no recurring charges, and all future Pro features are included." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No. SendToAI Pro is a one-time payment of $14.99 (plus VAT where applicable). The Team pack is $39 one-time for up to 5 developers. You get a lifetime license with no recurring charges, and all future Pro features are included." }
     },
     {
       "@type": "Question",
@@ -184,7 +185,7 @@ section { position: relative; z-index: 1; }
 .feat-title { font-family: var(--display); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .feat-desc { font-size: 14px; color: var(--fg2); line-height: 1.6; }
 .feat-pro { display: inline-block; font-family: var(--mono); font-size: 9px; font-weight: 700; background: linear-gradient(135deg,#f7b733,#e07b39); color: #fff; padding: 2px 6px; border-radius: 6px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.4px; }
-.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px; max-width: 800px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; max-width: 1100px; }
 .plan-card { border: 1px solid var(--border2); border-radius: 12px; padding: 36px 32px; background: var(--bg2); position: relative; }
 .plan-card.featured { border-color: var(--orange); background: linear-gradient(135deg, rgba(224,123,57,0.06) 0%, var(--bg2) 60%); }
 .plan-badge { position: absolute; top: -12px; left: 32px; background: var(--orange); color: #fff; font-family: var(--mono); font-size: 10px; font-weight: 500; padding: 3px 12px; border-radius: 100px; letter-spacing: 0.5px; }
@@ -273,7 +274,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
     <div class="stat-div"></div>
     <div class="stat"><div class="stat-val">0</div><div class="stat-lbl">data sent to us</div></div>
     <div class="stat-div"></div>
-    <div class="stat"><div class="stat-val">$0</div><div class="stat-lbl">monthly — Pro is $9.99 once</div></div>
+    <div class="stat"><div class="stat-val">$0</div><div class="stat-lbl">monthly — Pro is $14.99 once</div></div>
   </div>
   <div class="demo-wrap">
     <div class="demo-bar">
@@ -438,7 +439,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       <div class="plan-card featured">
         <div class="plan-badge">MOST POPULAR</div>
         <div class="plan-name">Pro</div>
-        <div class="plan-price"><sup>$</sup>9<span style="font-size:.5em">.99</span></div>
+        <div class="plan-price"><sup>$</sup>14<span style="font-size:.5em">.99</span></div>
         <div class="plan-period">one-time · plus VAT where applicable · lifetime license · 5 machines</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
@@ -452,6 +453,20 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
           <li><span class="chk">✓</span> 30-day money-back guarantee</li>
         </ul>
         <a class="plan-btn orange" href="https://sendtoai.lemonsqueezy.com/checkout/buy/e8764352-b784-409e-8d59-c44fd9aad90c" target="_blank" rel="noopener">Get SendToAI Pro →</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Team</div>
+        <div class="plan-price"><sup>$</sup>39</div>
+        <div class="plan-period">one-time · plus VAT where applicable · up to 5 developers · 25 activations</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Everything in Pro, for the whole team</li>
+          <li><span class="chk">✓</span> One key, 25 activations (5 developers × 5 machines)</li>
+          <li><span class="chk">✓</span> Lifetime license, all future Pro features</li>
+          <li><span class="chk">✓</span> 30-day money-back guarantee</li>
+          <li><span class="chk">✓</span> Need more seats? Email support@sendtoai.dev</li>
+        </ul>
+        <a class="plan-btn ghost" href="https://sendtoai.lemonsqueezy.com/checkout/buy/e8764352-b784-409e-8d59-c44fd9aad90c" target="_blank" rel="noopener">Get the Team pack →</a>
       </div>
     </div>
     <table class="compare-table">
@@ -472,7 +487,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
         <tr><td class="feature-name">Git diff mode</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Fit to AI Window (smart relevance trim)</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td></tr>
         <tr><td class="feature-name">Pro license machines</td><td><span class="cross">—</span></td><td class="col-pro">5</td></tr>
-        <tr><td class="feature-name">Price</td><td>Free</td><td class="col-pro">$9.99 one-time</td></tr>
+        <tr><td class="feature-name">Price</td><td>Free</td><td class="col-pro">$14.99 one-time · Team $39</td></tr>
       </tbody>
     </table>
   </div>
@@ -493,7 +508,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">How many files can I bundle? What are the limits?<span class="faq-arrow">↓</span></button>
-        <div class="faq-a">The free tier bundles the 50 most relevant files for your prompt; Pro ($9.99 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K to 1M window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window.</div>
+        <div class="faq-a">The free tier bundles the 50 most relevant files for your prompt; Pro ($14.99 one-time) removes the cap entirely. In practice the binding limit is your AI's context window, not the file count — a 200-file project may fit Claude's 200K to 1M window easily while 30 huge files won't fit ChatGPT Free. The token estimator and context bars show this before you paste, and Pro's Fit to AI Window auto-trims the bundle to a chosen model's window.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Does SendToAI send my code anywhere?<span class="faq-arrow">↓</span></button>
@@ -505,7 +520,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Can I use Pro on multiple computers?<span class="faq-arrow">↓</span></button>
-        <div class="faq-a">Yes — each Pro license allows activation on up to 5 machines. If you need more, contact us and we can accommodate team setups.</div>
+        <div class="faq-a">Yes — each Pro license allows activation on up to 5 machines. Teams: the Team pack ($39 one-time) is one key with 25 activations for up to 5 developers. Need more seats? Email support@sendtoai.dev.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What's the refund policy?<span class="faq-arrow">↓</span></button>
@@ -513,7 +528,7 @@ footer { border-top: 1px solid var(--border); padding: 40px; display: flex; alig
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Is this a subscription?<span class="faq-arrow">↓</span></button>
-        <div class="faq-a">No. SendToAI Pro is a one-time payment of $9.99 (plus VAT where applicable). You get a lifetime license with no recurring charges, and all future Pro features are included.</div>
+        <div class="faq-a">No. SendToAI Pro is a one-time payment of $14.99 (plus VAT where applicable). The Team pack is $39 one-time for up to 5 developers. You get a lifetime license with no recurring charges, and all future Pro features are included.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What is "Fit to AI Window"?<span class="faq-arrow">↓</span></button>
